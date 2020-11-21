@@ -195,7 +195,7 @@ def poll_follow_worker():
                     parse_mode='html',
                     disable_web_page_preview=False
                 )
-        time.sleep(15)
+        time.sleep(24*60*60)
 
 
 if __name__ == '__main__':
