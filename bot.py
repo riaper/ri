@@ -28,7 +28,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['city'])
 def handle_city(msg):
-    if re.match(r'^/city(\s[\w(\.\w\)-]{3,})$', msg.text) is None:
+    if re.match(r'^/city(\s[\w(\,\w\)-]{3,})$', msg.text) is None:
         handle_error(msg.chat.id, ERROR_MSG)
     else:
         city = msg.text.split()[1]
