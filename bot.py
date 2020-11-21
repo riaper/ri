@@ -168,7 +168,7 @@ def fetch_user_info(chat_id):
 
 def get_ready_msg(is_icon=True, **kwargs):
     return f'<b><u>Сводка по погоде</u></b>\n\n' \
-           f'<b>Локация</b>: {kwargs["timezone"]}\n' \
+           f'<b>Временная зона</b>: {kwargs["timezone"]}\n' \
            f'<b>Дата и время</b>: {dt.fromtimestamp(kwargs["dt"]).strftime("%a, %d. %b %Y %H:%M")}\n' \
            f'<b>Погода</b>: {kwargs["weather"][0]["main"]}\n' \
            f'<b>Температура</b>: {kwargs["temp"]["day"] if isinstance(kwargs["temp"], dict) else kwargs["temp"]} °C\n' \
